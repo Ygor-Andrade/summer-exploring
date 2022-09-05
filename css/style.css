@@ -1,8 +1,66 @@
 /* paleta de cores 
 orange: #e2a355
 orange clean:#deb37e
-gray:#7f7770  */
+gray:#7f7770 
+dark gray:#68635f
+ligth gray: #c3bfbc  */
 
-body{
+body {
     font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Barra de navegação */
+
+.searchbar {
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 60px;
+    background-color: #c3bfbc;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.search_input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 0;
+    caret-color: transparent;
+    line-height: 40px;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_input {
+    padding: 0 10px;
+    width: 220px;
+    caret-color: red;
+    transition: width 0.4s linear;
+}
+
+.searchbar:hover>.search_icon {
+    background: white;
+    color: #e2a355;
+}
+
+.search_icon {
+    height: 40px;
+    width: 40px;
+    float: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    color: #68635f;
+    text-decoration: none;
+}
+
+
+
+/* celular e tablets */
+
+@media screen and (max-width: 992px) {
+
+    
 }

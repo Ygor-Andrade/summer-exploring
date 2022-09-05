@@ -28,9 +28,9 @@
 
   <header>
 
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm bg-papel-bottom pt-0 pb-4">
       <div class="container">
-        <a class="navbar-brand" href="#"><img src="./imagens/logo.png" alt="Logotipo Summer Exploring."></a>
+        <a class="navbar-brand" href="#"><img src="./imagens/logo.png" class="logo" alt="Logotipo Summer Exploring."></a>
         <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
           data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
           aria-label="Toggle navigation">
@@ -39,20 +39,20 @@
         <div class="collapse navbar-collapse" id="collapsibleNavId">
           <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
             <li class="nav-item me-3">
-              <a class="nav-link active" href="#" aria-current="page">Home <span
+              <a class="nav-link active fw-bold" href="#" aria-current="page">Home <span
                   class="visually-hidden">(current)</span></a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Vamos nessa!</a>
+              <a class="nav-link fw-bold" href="#">Vamos nessa!</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Promoção</a>
+              <a class="nav-link fw-bold" href="#">Promoção</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Explorar</a>
+              <a class="nav-link fw-bold" href="#">Explorar</a>
             </li>
             <li class="nav-item me-3">
-              <a class="nav-link" href="#">Contatos</a>
+              <a class="nav-link fw-bold" href="#">Contatos</a>
             </li>
           </ul>
           <form class="d-flex my-2 my-lg-0">
@@ -72,9 +72,46 @@
 
   <main>
 
-
-
-
+<section id="banner-topo">
+<div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active" aria-current="true" aria-label="First slide"></li>
+    <li data-bs-target="#carouselId" data-bs-slide-to="1" aria-label="Second slide"></li>
+    <li data-bs-target="#carouselId" data-bs-slide-to="2" aria-label="Third slide"></li>
+  </ol>
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active">
+      <img src="./imagens/grupo2-aventureira.jpg" class="w-100 d-block" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="holder.js/900x500/auto/#666:#444/text:Second slide" class="w-100 d-block" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="holder.js/900x500/auto/#666:#444/text:Third slide" class="w-100 d-block" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h3>Title</h3>
+        <p>Description</p>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+    </button>
+</div>
+</section>
 
   </main>
   <footer>

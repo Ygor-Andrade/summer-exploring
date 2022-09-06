@@ -1,30 +1,29 @@
 /* paleta de cores 
 orange: #e2a355
-orange clean:#deb37e
-gray:#7f7770 
-dark gray:#68635f
-ligth gray: #c3bfbc  */
+orange clean: #deb37e
+gray: #7f7770 
+dark gray: #68635f 
+light gray #c3bfbc */
 
 body {
+
     font-family: 'Open Sans', sans-serif;
 }
 
-.logo{
+
+/* header styles  */
+.logo {
     height: 80px;
 }
 
-/* header styles */
 .bg-papel-bottom {
-    background-image: url('../imagens/bg-rasgado-bramco-base.png');
-    height: 120px;
-    background-position: 0 50px;
-    background-repeat: no-repeat;
+    background-image: url('../imagens/bg-rasgado-branco-topo.png');
     background-size: 100%;
-}   
+    background-position: 0 -46px;
+    background-repeat: no-repeat;
+}
 
-
-/* Barra de navegação */
-
+/* ////////// BARRA DE BUSCA /////// */
 .searchbar {
     margin-bottom: auto;
     margin-top: auto;
@@ -47,7 +46,7 @@ body {
 
 .searchbar:hover>.search_input {
     padding: 0 10px;
-    width: 220px;
+    width: 200px;
     caret-color: red;
     transition: width 0.4s linear;
 }
@@ -70,7 +69,34 @@ body {
 }
 
 
+.txt-laranja {
+    color: #e2a355
+}
 
-/* celular e tablets */
+.txt-cinza {
+    color: #7f7770
+}
 
+.bg-laranja {
+    background-color: #deb37e;
+
+}
+
+.bg-cinza {
+    background-color: #7f7770;
+
+}
+
+.bg-cinza-op7{
+    background-color: rgba(127, 119, 113, 0.70);
+    
+}
+
+.bg-folhas-left {
+    background-image: url("../imagens/bg-sombra-folhagem.png");
+    background-repeat: no-repeat;
+    background-position: -130px center;
+}
+
+/* /////////  CELULAR E TABLETS //////////// */
 @media screen and (max-width: 992px) {}

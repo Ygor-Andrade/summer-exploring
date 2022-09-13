@@ -48,14 +48,14 @@ body {
   transition: width 0.4s linear;
 }
 
-.searchbar:hover>.search_input {
+.searchbar:hover > .search_input {
   padding: 0 10px;
   width: 200px;
   caret-color: red;
   transition: width 0.4s linear;
 }
 
-.searchbar:hover>.search_icon {
+.searchbar:hover > .search_icon {
   background: white;
   color: #e2a355;
 }
@@ -150,7 +150,6 @@ body {
     -webkit-transform-origin: 84% 84%;
     transform-origin: 84% 84%;
   }
-
   100% {
     -webkit-transform: scale(1.25) translate(20px, 15px);
     transform: scale(1.25) translate(20px, 15px);
@@ -158,7 +157,6 @@ body {
     transform-origin: right bottom;
   }
 }
-
 @keyframes kenburns-bottom-right {
   0% {
     -webkit-transform: scale(1) translate(0, 0);
@@ -166,7 +164,6 @@ body {
     -webkit-transform-origin: 84% 84%;
     transform-origin: 84% 84%;
   }
-
   100% {
     -webkit-transform: scale(1.25) translate(20px, 15px);
     transform: scale(1.25) translate(20px, 15px);

@@ -29,40 +29,50 @@ const getEstados = () => {
   fetch(api).then(resposta => resposta.json()).then(json => {
     let options = '<option>Selecione</option>'
 
-    //Percorre o objeto JSON com os estados do brasil
-
+    //Percorre o objeto JSON com os estados do Brasil
     for (const index in json) {
-      // 
       options += `<option value=${json[index].sigla}>${json[index].nome}</option>`
     }
     select.innerHTML = options
-
-  })  
+  })
 }
 
-//preenche o select de cidades de acordo com o UF selecionado
-//A função recebe um parametro com o ID da UF
-const getCidadesByUf = (uf)=>{ 
+
+//Preenche o select de cidades de acordo com o UF selecionado
+//A função recebe um parâmetro (uf) com a sigla da UF
+const getCidadesByUf = (uf) => {
   let api = `https://servicodados.ibge.gov.br/api/v1/localidades/estados/${uf}/municipios`
-alert(api)
+  let select = document.getElementById('cidade')
+
+  fetch(api).then(resposta => resposta.json()).then(json => {
+    let options = '<option>Selecione</option>'
+
+    for (const index in json) {
+      options += `<option value=${json[index].nome}>${json[index].nome}</option>`
+    }
+    select.innerHTML = options
+  })
+
 }
 
+const rolagem = () => {
+const html = document.documentElement
+  const seta = document.getElementById('go-top')
 
+  // Sea rolagem for  maior 550, a seta aparece 
+  //abaixo de 500 esconde
 
-// var semestre = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun']
-// var test = ''
-// for (let index = 0; index < semestre.length; index++) {
-// const element = semestre[index];
-// texto += element + '<br>'
-
-// document.getElementById('explorar').innerHTML = texto
-// }
-
-
+  if (html.scrollTop > 500) {
+    seta.style.display = 'block'
+  } else {
+    seta.style.display = 'none'
+  }
+}
 /* ---------------------------------------------------- */
 
 
 /* //////////// EVENTOS E EXECUÇÕES AUTOMÁTICAS  /////////// */
+rolagem()
 
 getEstados()
 
@@ -97,27 +107,11 @@ AOS.init();
 })()
 
 
-
-/* 
-const getEstados = ()=>{
-let api = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados'
-let select = document.getElementById('estado')
-
-//Lê a API através do fetch(), 1o then captura os dados, 2o then trata os dados
-fetch(api).then(resposta => resposta.json()).then(json => {
-  var options = '<option>Selecione</option>'
-  //Executa em cada item do JSON
-  for (const key in json) {
-    options += '<option>'+json[key].nome+'</option>'
-  }
-
-  select.innerHTML = options
-})
-
-}
-*/
-
-document.getElementById('estado').addEventListener('change', function(){
+document.getElementById('estado').addEventListener('change', function () {
   getCidadesByUf(this.value)
 })
+
+
+
+window.onscroll= ()=> rolagem()
 

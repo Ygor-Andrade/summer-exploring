@@ -132,6 +132,27 @@ body {
   transform: scaleX(-1);
 }
 
+.seta-topo{
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 20px;
+  color: #fff;  
+  background-color: #68635f;
+  transition: background-color 0.5s;
+}
+.seta-topo:hover{
+  color: #fff;  
+  background-color: #e2a355;
+}
+
 /* animação  */
 .kenburns-bottom-right {
   -webkit-animation: kenburns-bottom-right 9s ease-out both;
